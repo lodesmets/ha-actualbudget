@@ -215,7 +215,7 @@ class ActualBudget:
             self.get_session()
 
             self.actual.sync()
-            self.actual.run_bank_sync(None, None, True)
+            self.actual.run_bank_sync(run_rules=True)
             self.actual.commit()
 
     async def run_budget_sync(self) -> None:
